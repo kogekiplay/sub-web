@@ -225,7 +225,7 @@ export default {
               {
                 label: "私房菜",
                 value:
-                  "https://raw.githubusercontent.com/NotSFC/subconverter-config/main/external-config/sfc.ini"
+                  "https://cdn.jsdelivr.net/gh/NotSFC/subconverter-config@main/external-config/sfc.ini"
               }
             ]
           },
