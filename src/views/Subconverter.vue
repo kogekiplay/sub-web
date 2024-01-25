@@ -57,7 +57,13 @@
                     </el-col>
                     <el-popover placement="bottom" v-model="form.extraset">
                       <el-row>
-                        <el-checkbox v-model="form.emoji" label="Emoji"></el-checkbox>
+                        <el-checkbox v-model="form.emoji" label="Emoji开关"></el-checkbox>
+                      </el-row>
+                      <el-row>
+                        <el-checkbox v-model="form.addemoji" label="添加Emoji"></el-checkbox>
+                      </el-row>
+                      <el-row>
+                        <el-checkbox v-model="form.removeemoji" label="移除Emoji"></el-checkbox>
                       </el-row>
                       <el-row>
                         <el-checkbox v-model="form.scv" label="跳过证书验证"></el-checkbox>
@@ -303,7 +309,9 @@ export default {
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
-        emoji: true,
+        emoji: false,
+        addemoji: false,
+        removeemoji: false,
         nodeList: false,
         extraset: false,
         sort: false,
@@ -441,6 +449,10 @@ export default {
         this.customSubUrl +=
           "&emoji=" +
           this.form.emoji.toString() +
+          "&add_emoji=" +
+          this.form.addemoji.toString() +
+          "&remove_emoji=" +
+          this.form.removeemoji.toString() +
           "&list=" +
           this.form.nodeList.toString() +
           "&tfo=" +
@@ -627,7 +639,9 @@ export default {
           this.form.includeRemarks = params.get("include");
           this.form.filename = params.get("filename");
           this.form.appendType = params.get("append_type") === "true";
-          this.form.emoji = params.get("emoji") === "true";
+          this.form.emoji = params.get("emoji") === "false";
+          this.form.addemoji = params.get("emoji") === "false";
+          this.form.removeemoji = params.get("emoji") === "false";
           this.form.nodeList = params.get("list") === "true";
           this.form.tfo = params.get("tfo") === "true";
           this.form.scv = params.get("scv") === "true";
