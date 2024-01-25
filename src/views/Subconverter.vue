@@ -211,7 +211,7 @@ export default {
           ClashR: "clashr",
           Surge2: "surge&ver=2",
         },
-        backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
+        backendOptions: [{ value: "https://cvt.sfcat.link/sub?" }],
         remoteConfig: [
           {
             label: "universal",
@@ -289,7 +289,7 @@ export default {
         sourceSubUrl: "",
         clientType: "",
         customBackend: "",
-        remoteConfig: "",
+        remoteConfig: "https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/remote-config/universal/no-urltest.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
