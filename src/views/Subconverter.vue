@@ -211,7 +211,7 @@ export default {
           ClashR: "clashr",
           Surge2: "surge&ver=2",
         },
-        backendOptions: [{ value: "https://cvt.sfcat.link/sub?" }],
+        backendOptions: [{ value: "https://transfer.sfcat.link/sub?" }],
         remoteConfig: [
           {
             label: "special",
