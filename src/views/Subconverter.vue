@@ -214,6 +214,16 @@ export default {
         backendOptions: [{ value: "https://cvt.sfcat.link/sub?" }],
         remoteConfig: [
           {
+            label: "special",
+            options: [
+              {
+                label: "私房菜",
+                value:
+                  "https://cdn.jsdelivr.net/gh/NotSFC/subconverter-config@main/external-config/sfc.ini"
+              }
+            ]
+          },
+          {
             label: "universal",
             options: [
               {
@@ -287,9 +297,9 @@ export default {
       },
       form: {
         sourceSubUrl: "",
-        clientType: "",
+        clientType: "Sing-box",
         customBackend: "",
-        remoteConfig: "https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/remote-config/universal/no-urltest.ini",
+        remoteConfig: "https://cdn.jsdelivr.net/gh/NotSFC/subconverter-config@main/external-config/sfc.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
