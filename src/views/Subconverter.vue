@@ -309,7 +309,7 @@ export default {
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
-        emoji: false,
+        emoji: true,
         addemoji: false,
         removeemoji: false,
         nodeList: false,
@@ -639,7 +639,7 @@ export default {
           this.form.includeRemarks = params.get("include");
           this.form.filename = params.get("filename");
           this.form.appendType = params.get("append_type") === "true";
-          this.form.emoji = params.get("emoji") === "false";
+          this.form.emoji = params.get("emoji") === "true";
           this.form.addemoji = params.get("emoji") === "false";
           this.form.removeemoji = params.get("emoji") === "false";
           this.form.nodeList = params.get("list") === "true";
