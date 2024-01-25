@@ -303,7 +303,7 @@ export default {
       },
       form: {
         sourceSubUrl: "",
-        clientType: "Sing-box",
+        clientType: "",
         customBackend: "",
         remoteConfig: "https://cdn.jsdelivr.net/gh/NotSFC/subconverter-config@main/external-config/sfc.ini",
         excludeRemarks: "",
@@ -436,6 +436,10 @@ export default {
         if (this.form.includeRemarks !== "") {
           this.customSubUrl +=
             "&include=" + encodeURIComponent(this.form.includeRemarks);
+        }
+        if (this.form.filename == "") {
+          this.customSubUrl +=
+            "&filename=SiFangCai_Convert";
         }
         if (this.form.filename !== "") {
           this.customSubUrl +=
