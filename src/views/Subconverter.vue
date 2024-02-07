@@ -226,6 +226,11 @@ export default {
                 label: "私房菜",
                 value:
                   "https://cdn.jsdelivr.net/gh/NotSFC/subconverter-config@main/external-config/sfc.ini"
+              },
+              {
+                label: "私房菜(无fallback,sing-box使用)",
+                value:
+                  "https://cdn.jsdelivr.net/gh/NotSFC/subconverter-config@main/external-config/sfc_nofallback.ini"
               }
             ]
           },
