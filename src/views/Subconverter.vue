@@ -17,7 +17,7 @@
               </el-form-item>
               <el-form-item label="订阅链接:">
                 <el-input v-model="form.sourceSubUrl" type="textarea" rows="3"
-                  placeholder="支持订阅或ss/ssr/vmess链接，多个链接每行一个或用 | 分隔" @blur="saveSubUrl" />
+                  placeholder="支持Clash Meta订阅或ss/ssr/vmess链接，多个链接每行一个或用 | 分隔" @blur="saveSubUrl" />
               </el-form-item>
               <el-form-item label="客户端:">
                 <el-select v-model="form.clientType" style="width: 100%">
@@ -530,12 +530,12 @@ export default {
       const h = this.$createElement;
 
       this.$notify({
-        title: "隐私提示",
+        title: "转换前必看",
         type: "warning",
         message: h(
           "i",
           { style: "color: teal" },
-          "各种订阅链接（短链接服务除外）生成纯前端实现，无隐私问题。默认提供后端转换服务，隐私担忧者请自行搭建后端服务。"
+          "请注意如果你要转换新协议 Vless/Hysteria2 订阅，请保证使用的是Clash Meta格式的订阅，一般为订阅链接后增加 &flag=meta 或 &flag=clashmeta 或 &flag=meta&types=all (Xboard专属)"
         )
       });
     },
